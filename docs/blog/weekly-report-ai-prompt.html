@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="../">
+<title>주간보고 5분 만에 끝내기 — AI 주간업무보고 프롬프트 (복붙용)</title>
+<meta name="description" content="한 일만 대충 적어 붙여넣으면 실적·계획·이슈 양식으로 정리되는 주간보고 프롬프트와 매주 자동으로 양식을 유지하는 방법.">
+<meta property="og:title" content="주간보고 5분 만에 끝내기 — AI 주간업무보고 프롬프트 (복붙용)">
+<meta property="og:description" content="한 일만 대충 적어 붙여넣으면 실적·계획·이슈 양식으로 정리되는 주간보고 프롬프트와 매주 자동으로 양식을 유지하는 방법.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://seungyun-shin.github.io/Agent_work_reposi/blog/weekly-report-ai-prompt.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/config.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="../">AI 업무자동화 키트</a><nav><a href="../free-prompts.html">무료 샘플</a><a href="../blog/">블로그</a></nav></div></header>
+<main class="wrap"><article>
+<h1>주간보고 5분 만에 끝내기 — AI 주간업무보고 프롬프트 (복붙용)</h1>
+<p class="price">2026-10-13</p>
+<p>금요일 오후마다 "이번 주에 뭐 했더라?" 하며 주간보고를 쓰는 데 한
+시간씩 쓰고 있다면, 방법을 바꿀 때입니다. <strong>매일 30초 메모 +
+금요일 5분 AI 정리</strong>면 충분합니다.</p>
+<h2 id="주간보고가-오래-걸리는-진짜-이유">주간보고가 오래 걸리는 진짜
+이유</h2>
+<p>주간보고가 힘든 건 글솜씨 때문이 아니라 두 가지 때문입니다.</p>
+<ol type="1">
+<li>금요일에 <strong>일주일치를 기억해내야</strong> 한다.</li>
+<li>한 일을 <strong>"성과처럼 보이게"</strong> 다시 써야 한다.</li>
+</ol>
+<p>1번은 매일 퇴근 전 메모장에 한 줄씩 적는 습관으로, 2번은 AI로
+해결합니다.</p>
+<h2 id="복붙용-주간보고-프롬프트">복붙용 주간보고 프롬프트</h2>
+<pre><code>아래 이번 주 내가 한 일 목록을 주간보고 양식으로 정리해줘.
+
+양식:
+■ 금주 실적 (성과 중심으로, 가능하면 수치 포함)
+■ 차주 계획
+■ 이슈 및 지원 요청
+
+규칙:
+- 단순 업무 나열이 아니라 &quot;무엇을 해서 어떤 결과가 나왔는지&quot;로 표현
+- 비슷한 항목은 묶기
+- 각 섹션 최대 5개 항목
+
+[이번 주 한 일 - 대충 적어도 됨]</code></pre>
+<h2 id="메모는-이-정도로-대충-써도-됩니다">메모는 이 정도로 대충 써도
+됩니다</h2>
+<pre><code>월 - A사 미팅, 견적 다시 보내기로
+화 - 견적서 수정 발송, 신규 입사자 온보딩
+수 - 3분기 매출 데이터 정리 (전년比 12% 증가)
+목 - B사 클레임 대응, 배송 프로세스 개선안 초안
+금 - 팀 회의, 다음 주 A사 계약 예정</code></pre>
+<p>이걸 붙여넣으면 AI가 "A사 견적 재발송 완료 → 다음 주 계약 예정",
+"3분기 매출 분석 완료(전년 대비 +12%)"처럼 결과 중심 문장으로
+바꿔줍니다.</p>
+<h2 id="매주-같은-양식-유지하는-법">매주 같은 양식 유지하는 법</h2>
+<table>
+<thead>
+<tr class="header">
+<th>방법</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>대화창 재사용</td>
+<td>첫 주에 쓴 대화를 저장해두고 매주 "이번 주 메모야" 하고 이어서
+붙여넣기</td>
+</tr>
+<tr class="even">
+<td>회사 양식 학습</td>
+<td>지난 주간보고 하나를 먼저 붙여넣고 "이 양식과 문체 그대로" 라고
+요청</td>
+</tr>
+<tr class="odd">
+<td>맞춤 지침 기능</td>
+<td>ChatGPT 맞춤형 지침, Claude 프로젝트에 양식을 저장해두기</td>
+</tr>
+</tbody>
+</table>
+<h2 id="주의할-점">주의할 점</h2>
+<ul>
+<li><strong>수치는 직접 확인하세요.</strong> 메모에 없던 숫자를 AI가
+만들어낼 수 있습니다. 프롬프트에 "메모에 없는 숫자는 지어내지 말 것"을
+추가하면 안전합니다.</li>
+<li><strong>회사 기밀</strong>(고객사명, 계약 금액 등)은 회사 정책에
+따라 가려서 붙여넣으세요.</li>
+</ul>
+<h2 id="요약">요약</h2>
+<ul>
+<li>매일 퇴근 전 <strong>한 줄 메모</strong> (30초)</li>
+<li>금요일에 메모를 붙여넣고 <strong>실적·계획·이슈 양식</strong>으로
+정리</li>
+<li>대화창 재사용 또는 기존 보고서 예시로 <strong>회사 양식
+유지</strong></li>
+<li><strong>숫자는 반드시 직접 검토</strong></li>
+</ul>
+
+</article>
+<div class="cta">
+<h3>이런 프롬프트가 40개 더 있습니다</h3>
+<p>메일·보고서·회의·엑셀·마케팅·CS까지, 복붙해서 바로 쓰는 실무 프롬프트 40개 + 자동화 워크플로우 5개.</p>
+<p class="price"><s data-list-price></s> 런칭 특가 <b data-price></b></p>
+<a class="btn" data-buy href="../">키트 자세히 보기</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 AI 업무자동화 키트</div></footer>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="../">
+<title>엑셀 수식 AI로 만드는 법 — 챗GPT에게 한 번에 맞는 수식 받는 질문법</title>
+<meta name="description" content="SUMIFS, XLOOKUP 같은 엑셀 수식을 검색하지 말고 AI에게 받으세요. 한 번에 정확한 수식이 나오는 질문 방법과 복붙용 프롬프트.">
+<meta property="og:title" content="엑셀 수식 AI로 만드는 법 — 챗GPT에게 한 번에 맞는 수식 받는 질문법">
+<meta property="og:description" content="SUMIFS, XLOOKUP 같은 엑셀 수식을 검색하지 말고 AI에게 받으세요. 한 번에 정확한 수식이 나오는 질문 방법과 복붙용 프롬프트.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://seungyun-shin.github.io/Agent_work_reposi/blog/excel-formula-with-ai.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/config.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="../">AI 업무자동화 키트</a><nav><a href="../free-prompts.html">무료 샘플</a><a href="../blog/">블로그</a></nav></div></header>
+<main class="wrap"><article>
+<h1>엑셀 수식 AI로 만드는 법 — 챗GPT에게 한 번에 맞는 수식 받는 질문법</h1>
+<p class="price">2026-10-13</p>
+<p>엑셀 수식이 필요할 때마다 검색해서 블로그 예제를 내 데이터에 맞게
+고치느라 30분씩 쓰고 있다면, AI에게 바로 물어보는 편이 훨씬 빠릅니다.
+단, <strong>질문하는 방법</strong>에 따라 한 번에 맞는 수식이 나오기도
+하고, 열 번을 고쳐도 안 맞기도 합니다.</p>
+<h2 id="ai가-엉뚱한-수식을-주는-이유">AI가 엉뚱한 수식을 주는 이유</h2>
+<p>"매출 합계 구하는 수식 알려줘"라고 물으면 AI는 내 시트를 볼 수 없으니
+<code>=SUM(A1:A10)</code> 같은 일반적인 예시를 줄 수밖에 없습니다.
+AI에게 필요한 정보는 딱 세 가지입니다.</p>
+<ol type="1">
+<li><strong>데이터가 어느 열에 어떻게 있는지</strong></li>
+<li><strong>결과를 어디에 어떤 모양으로 원하는지</strong></li>
+<li><strong>어떤 버전의 엑셀을 쓰는지</strong> (XLOOKUP, FILTER 같은
+함수는 구버전에 없습니다)</li>
+</ol>
+<h2 id="복붙용-엑셀-수식-프롬프트">복붙용 엑셀 수식 프롬프트</h2>
+<pre><code>엑셀(또는 구글 시트) 수식을 만들어줘.
+
+- 데이터 구조: [예: A열 날짜, B열 담당자, C열 매출액, 2행부터 데이터]
+- 원하는 결과: [예: 담당자별 이번 달 매출 합계를 F열에]
+- 사용 프로그램: [엑셀 365 / 엑셀 2016 / 구글 시트]
+
+수식과 함께:
+1. 수식이 어떻게 작동하는지 한 줄씩 설명
+2. 자주 발생하는 오류와 해결법</code></pre>
+<h2 id="가장-정확한-방법-데이터-몇-줄을-그대로-붙여넣기">가장 정확한
+방법: 데이터 몇 줄을 그대로 붙여넣기</h2>
+<p>열 구조를 말로 설명하기 어렵다면, 헤더와 데이터 3~5줄을 엑셀에서
+복사해서 그대로 붙여넣으세요. 표 형태가 유지되어 AI가 구조를 정확히
+파악합니다.</p>
+<blockquote>
+<p>고객 이름, 전화번호 같은 개인정보는 <code>고객A</code>,
+<code>010-XXXX-XXXX</code>처럼 바꿔서 붙여넣으세요.</p>
+</blockquote>
+<h2 id="자주-쓰는-요청-예시">자주 쓰는 요청 예시</h2>
+<table>
+<thead>
+<tr class="header">
+<th>하고 싶은 것</th>
+<th>이렇게 요청하세요</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>조건별 합계</td>
+<td>"B열이 '김철수'이고 A열이 10월인 행의 C열 합계"</td>
+</tr>
+<tr class="even">
+<td>다른 시트에서 값 찾기</td>
+<td>"Sheet2의 A열 코드와 일치하는 행의 C열 단가를 가져와줘"</td>
+</tr>
+<tr class="odd">
+<td>중복 제거 목록</td>
+<td>"B열 담당자 이름을 중복 없이 F열에 나열해줘"</td>
+</tr>
+<tr class="even">
+<td>조건부 표시</td>
+<td>"C열이 목표(D열)보다 작으면 E열에 '미달' 표시"</td>
+</tr>
+<tr class="odd">
+<td>날짜 계산</td>
+<td>"A열 계약일로부터 영업일 기준 14일 뒤 날짜"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="수식이-에러가-날-때">수식이 에러가 날 때</h2>
+<p>에러가 나면 고민하지 말고 같은 대화창에 이렇게 보내세요.</p>
+<pre><code>이 수식을 넣었더니 [#N/A / #VALUE! / #REF!] 에러가 나.
+수식: [넣은 수식]
+해당 셀의 실제 값 예시: [값]
+원인과 고친 수식을 알려줘.</code></pre>
+<p>대부분 숫자가 텍스트로 저장되어 있거나, 찾는 값 앞뒤에 공백이 있거나,
+범위가 어긋난 경우입니다. AI가 원인을 짚어주고 <code>TRIM</code>,
+<code>VALUE</code> 같은 보정 함수를 붙인 수식을 다시 줍니다.</p>
+<h2 id="요약">요약</h2>
+<ul>
+<li>데이터 <strong>위치·결과 위치·엑셀 버전</strong> 세 가지를 꼭
+알려준다.</li>
+<li>가능하면 <strong>헤더 + 데이터 몇 줄</strong>을 그대로
+붙여넣는다.</li>
+<li>수식만 받지 말고 <strong>설명과 흔한 오류</strong>까지 함께
+요청한다.</li>
+<li>에러가 나면 <strong>에러 코드와 실제 값</strong>을 붙여 다시
+묻는다.</li>
+</ul>
+
+</article>
+<div class="cta">
+<h3>이런 프롬프트가 40개 더 있습니다</h3>
+<p>메일·보고서·회의·엑셀·마케팅·CS까지, 복붙해서 바로 쓰는 실무 프롬프트 40개 + 자동화 워크플로우 5개.</p>
+<p class="price"><s data-list-price></s> 런칭 특가 <b data-price></b></p>
+<a class="btn" data-buy href="../">키트 자세히 보기</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 AI 업무자동화 키트</div></footer>
+</body>
+</html>

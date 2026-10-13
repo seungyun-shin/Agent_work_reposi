@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="">
+<title>무료 샘플 — 직장인 AI 프롬프트 5개 (복붙용)</title>
+<meta name="description" content="ChatGPT·Claude·Gemini에 그대로 붙여넣어 쓰는 실무 프롬프트 5개와 좋은 프롬프트를 만드는 5요소 공식을 무료로 공개합니다.">
+<meta property="og:title" content="무료 샘플 — 직장인 AI 프롬프트 5개 (복붙용)">
+<meta property="og:description" content="ChatGPT·Claude·Gemini에 그대로 붙여넣어 쓰는 실무 프롬프트 5개와 좋은 프롬프트를 만드는 5요소 공식을 무료로 공개합니다.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://seungyun-shin.github.io/Agent_work_reposi/free-prompts.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/config.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="">AI 업무자동화 키트</a><nav><a href="free-prompts.html">무료 샘플</a><a href="blog/">블로그</a></nav></div></header>
+<main class="wrap"><article>
+<h1>무료 샘플 — 직장인 AI 프롬프트 5개 (복붙용)</h1>
+
+<p><strong>사용법:</strong> 박스 안의 내용을 통째로 복사해서
+<code>[대괄호]</code> 부분만 바꾼 뒤 AI에게 붙여넣으세요.</p>
+<blockquote>
+<p>회사 기밀이나 고객 개인정보는 붙여넣기 전에 꼭 가려주세요 (예:
+<code>고객A</code>, <code>010-XXXX-XXXX</code>).</p>
+</blockquote>
+<h2 id="좋은-프롬프트의-5요소-공식">좋은 프롬프트의 5요소 공식</h2>
+<table>
+<thead>
+<tr class="header">
+<th>요소</th>
+<th>의미</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>역할</strong></td>
+<td>AI에게 맡길 전문가 역할</td>
+<td>"10년차 B2B 영업팀장으로서"</td>
+</tr>
+<tr class="even">
+<td><strong>맥락</strong></td>
+<td>배경 상황, 대상, 목적</td>
+<td>"거래처가 납기 지연에 화가 난 상황"</td>
+</tr>
+<tr class="odd">
+<td><strong>작업</strong></td>
+<td>구체적으로 할 일</td>
+<td>"사과와 대안을 담은 회신 메일을 써줘"</td>
+</tr>
+<tr class="even">
+<td><strong>형식</strong></td>
+<td>결과물의 모양</td>
+<td>"제목 1줄 + 본문 5문장 이내"</td>
+</tr>
+<tr class="odd">
+<td><strong>제약</strong></td>
+<td>하지 말아야 할 것, 톤</td>
+<td>"변명처럼 들리는 표현은 빼고"</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-어려운-거절-메일">1. 어려운 거절 메일</h2>
+<pre><code>너는 대인관계가 좋은 [직무] 담당자야.
+아래 요청을 정중하게 거절하는 메일을 써줘.
+
+- 받는 사람: [상대 이름/직급/관계]
+- 상대의 요청: [요청 내용]
+- 거절 이유(내부용, 그대로 쓰지 말고 적절히 순화): [실제 이유]
+- 대신 제안할 수 있는 것: [대안, 없으면 &quot;없음&quot;]
+
+형식: 제목 1줄 + 본문 6문장 이내
+톤: 정중하지만 애매하지 않게. &quot;검토해보겠다&quot; 같은 여지를 남기는 표현 금지.</code></pre>
+<h2 id="2-메모를-정식-보고서로">2. 메모를 정식 보고서로</h2>
+<pre><code>너는 대기업 전략기획팀 출신 보고서 작성 전문가야.
+아래 메모를 [상사 직급]에게 올릴 1페이지 보고서로 정리해줘.
+
+구성:
+1. 제목 (결론이 드러나게)
+2. 요약 (3줄, 결론 먼저)
+3. 현황 / 문제
+4. 원인 분석
+5. 제안 (선택지가 있으면 비교표)
+6. 필요한 의사결정 / 요청사항
+
+문체: 개조식(~함, ~임), 한 줄은 40자 이내.
+메모에 없는 숫자는 지어내지 말고 [확인 필요]로 표시.
+
+[메모 붙여넣기]</code></pre>
+<p>💡 마지막 줄의 "지어내지 말고 [확인 필요]로 표시"가 AI의 거짓
+정보(환각)를 크게 줄여줍니다.</p>
+<h2 id="3-회의록-정리">3. 회의록 정리</h2>
+<pre><code>아래는 회의 녹취(또는 메모)야. 회의록으로 정리해줘.
+
+형식:
+- 회의명 / 일시 / 참석자
+- 결정 사항 (번호 매기기)
+- 액션 아이템 표: | 할 일 | 담당자 | 마감일 |
+- 보류/추가 논의 사항
+- 다음 회의 일정
+
+규칙: 누가 무슨 말을 했는지 나열하지 말고 &quot;결정&quot;과 &quot;할 일&quot; 중심으로.
+담당자·마감일이 불분명하면 [미정]으로 표시.
+
+[녹취/메모 붙여넣기]</code></pre>
+<h2 id="4-원하는-엑셀-수식-만들기">4. 원하는 엑셀 수식 만들기</h2>
+<pre><code>엑셀(또는 구글 시트) 수식을 만들어줘.
+
+- 데이터 구조: [예: A열 날짜, B열 담당자, C열 매출액, 2행부터 데이터]
+- 원하는 결과: [예: 담당자별 이번 달 매출 합계를 F열에]
+- 사용 프로그램: [엑셀 365 / 엑셀 2016 / 구글 시트]
+
+수식과 함께:
+1. 수식이 어떻게 작동하는지 한 줄씩 설명
+2. 자주 발생하는 오류와 해결법</code></pre>
+<h2 id="5-하루-업무-우선순위-정리">5. 하루 업무 우선순위 정리</h2>
+<pre><code>오늘 해야 할 일 목록이야. 아이젠하워 매트릭스로 분류하고
+오늘 근무 시간([출근]~[퇴근]) 안에 끝낼 수 있는 시간표를 짜줘.
+
+- 회의 일정: [고정 일정]
+- 집중이 잘 되는 시간대: [예: 오전]
+- 오늘 꼭 끝내야 하는 것: [최우선 업무]
+
+미뤄도 되는 일과 위임할 수 있는 일도 따로 표시해줘.
+
+[할 일 목록]</code></pre>
+
+</article>
+<div class="cta">
+<h3>이런 프롬프트가 40개 더 있습니다</h3>
+<p>메일·보고서·회의·엑셀·마케팅·CS까지, 복붙해서 바로 쓰는 실무 프롬프트 40개 + 자동화 워크플로우 5개.</p>
+<p class="price"><s data-list-price></s> 런칭 특가 <b data-price></b></p>
+<a class="btn" data-buy href="">키트 자세히 보기</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 AI 업무자동화 키트</div></footer>
+</body>
+</html>

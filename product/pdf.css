@@ -1,0 +1,20 @@
+* { box-sizing: border-box; }
+body { font-family: "Noto Sans KR", "WenQuanYi Zen Hei", sans-serif; font-size: 10.5pt; line-height: 1.7; color: #1d1d1f; }
+@page { size: A4; margin: 18mm 16mm; }
+@page :first { margin: 0; }
+body { margin: 0; }
+.cover { height: 296mm; width: 210mm; display: flex; flex-direction: column; justify-content: center; page-break-after: always;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a); color: #fff; padding: 0 22mm; }
+.cover h1 { page-break-before: auto; font-size: 34pt; font-weight: 900; line-height: 1.25; margin: 0 0 8mm; border: 0; color: #fff; }
+.cover .sub { font-size: 15pt; opacity: .85; margin: 0; }
+.cover .badge { font-size: 10pt; letter-spacing: .1em; opacity: .7; margin-bottom: 10mm; }
+h1 { font-size: 20pt; font-weight: 900; color: #1e3a8a; page-break-before: always; border-bottom: 3px solid #1e3a8a; padding-bottom: 3mm; }
+h2 { font-size: 13.5pt; font-weight: 700; margin-top: 9mm; color: #0f172a; page-break-after: avoid; }
+pre { background: #f1f5f9; border-left: 4px solid #3b82f6; padding: 4mm 5mm; border-radius: 2mm;
+  white-space: pre-wrap; font-family: "Noto Sans KR", monospace; font-size: 9.5pt; line-height: 1.6; page-break-inside: avoid; }
+code { font-family: inherit; }
+blockquote { background: #fff7ed; border-left: 4px solid #f97316; margin: 4mm 0; padding: 2mm 5mm; }
+table { border-collapse: collapse; width: 100%; font-size: 9.5pt; page-break-inside: avoid; }
+th, td { border: 1px solid #cbd5e1; padding: 2mm 3mm; text-align: left; vertical-align: top; }
+th { background: #e2e8f0; }
+hr { display: none; }

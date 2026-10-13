@@ -1,0 +1,4 @@
+# 판매용 원고·PDF는 공개 저장소에 올리지 않는다
+*.pdf
+product/private/
+__pycache__/

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="root" content="../">
+<title>챗GPT 회의록 정리 프롬프트 (복붙용) — 녹취록을 3분 만에 회의록으로</title>
+<meta name="description" content="클로바노트·줌 녹취록을 그대로 붙여넣으면 결정사항과 액션 아이템 표까지 정리되는 회의록 프롬프트와 활용 팁.">
+<meta property="og:title" content="챗GPT 회의록 정리 프롬프트 (복붙용) — 녹취록을 3분 만에 회의록으로">
+<meta property="og:description" content="클로바노트·줌 녹취록을 그대로 붙여넣으면 결정사항과 액션 아이템 표까지 정리되는 회의록 프롬프트와 활용 팁.">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://seungyun-shin.github.io/Agent_work_reposi/blog/chatgpt-meeting-minutes-prompt.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="../assets/style.css">
+<script src="../assets/config.js"></script>
+</head>
+<body>
+<header class="top"><div class="wrap"><a href="../">AI 업무자동화 키트</a><nav><a href="../free-prompts.html">무료 샘플</a><a href="../blog/">블로그</a></nav></div></header>
+<main class="wrap"><article>
+<h1>챗GPT 회의록 정리 프롬프트 (복붙용) — 녹취록을 3분 만에 회의록으로</h1>
+<p class="price">2026-10-13</p>
+<p>회의가 끝나고 녹취록을 다시 들으며 회의록을 쓰는 데 30분 넘게 쓰고
+있다면, 이 글 하나로 그 시간을 3분으로 줄일 수 있습니다. 핵심은 AI에게
+<strong>"요약해줘"가 아니라 "결정과 할 일 중심으로
+정리해줘"</strong>라고 요청하는 것입니다.</p>
+<h2 id="왜-요약해줘로는-안-될까">왜 "요약해줘"로는 안 될까?</h2>
+<p>"이 회의 요약해줘"라고 하면 AI는 누가 어떤 말을 했는지 순서대로
+줄여서 보여줍니다. 하지만 회의록을 읽는 사람이 궁금한 건 세
+가지뿐입니다.</p>
+<ol type="1">
+<li>그래서 <strong>뭐가 결정됐는지</strong></li>
+<li><strong>누가 언제까지</strong> 뭘 해야 하는지</li>
+<li><strong>아직 안 정해진 것</strong>은 뭔지</li>
+</ol>
+<p>이 세 가지를 형식으로 못박아 주면 결과물이 완전히 달라집니다.</p>
+<h2 id="복붙용-회의록-프롬프트">복붙용 회의록 프롬프트</h2>
+<pre><code>아래는 회의 녹취(또는 메모)야. 회의록으로 정리해줘.
+
+형식:
+- 회의명 / 일시 / 참석자
+- 결정 사항 (번호 매기기)
+- 액션 아이템 표: | 할 일 | 담당자 | 마감일 |
+- 보류/추가 논의 사항
+- 다음 회의 일정
+
+규칙: 누가 무슨 말을 했는지 나열하지 말고 &quot;결정&quot;과 &quot;할 일&quot; 중심으로.
+담당자·마감일이 불분명하면 [미정]으로 표시.
+
+[녹취/메모 붙여넣기]</code></pre>
+<h2 id="이-프롬프트가-잘-작동하는-이유">이 프롬프트가 잘 작동하는
+이유</h2>
+<table>
+<thead>
+<tr class="header">
+<th>장치</th>
+<th>효과</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>형식을 목록으로 지정</td>
+<td>매번 같은 양식으로 나와 팀 공유가 쉬움</td>
+</tr>
+<tr class="even">
+<td>액션 아이템을 표로 요청</td>
+<td>엑셀·노션에 그대로 붙여넣기 가능</td>
+</tr>
+<tr class="odd">
+<td>"나열하지 말고" 금지 조건</td>
+<td>발언 요약 대신 결론 중심 정리</td>
+</tr>
+<tr class="even">
+<td>불분명하면 [미정] 표시</td>
+<td>AI가 담당자·날짜를 지어내는 것 방지</td>
+</tr>
+</tbody>
+</table>
+<p>특히 마지막 규칙이 중요합니다. AI는 빈칸을 그럴듯하게 채우려는 경향이
+있어서, 마감일이 언급되지 않았는데도 "다음 주 금요일"처럼 지어낼 수
+있습니다. <code>[미정]</code>으로 표시하게 하면 회의 후 누가 확인해야
+할지도 바로 보입니다.</p>
+<h2 id="녹취록은-어디서-구하나요">녹취록은 어디서 구하나요?</h2>
+<ul>
+<li><strong>클로바노트:</strong> 휴대폰으로 녹음하면 한국어 받아쓰기가
+자동으로 됩니다.</li>
+<li><strong>줌 / 구글 미트 / 팀즈:</strong> 회의 녹취(트랜스크립트)
+기능을 켜두면 회의 후 텍스트 파일을 받을 수 있습니다.</li>
+<li><strong>녹음이 없을 때:</strong> 회의 중 적은 메모를 대충 붙여넣어도
+됩니다. 결과 품질은 조금 떨어지지만 정리 시간은 똑같이 줄어듭니다.</li>
+</ul>
+<h2 id="한-단계-더-회의록--공유-메일까지-한-번에">한 단계 더: 회의록 →
+공유 메일까지 한 번에</h2>
+<p>회의록이 나온 같은 대화창에 이어서 이렇게 보내보세요.</p>
+<pre><code>위 회의록을 바탕으로 참석자와 불참자에게 보낼 공유 메일을 써줘.
+- 불참자도 맥락을 이해할 수 있게 배경 1줄 포함
+- 각 담당자의 할 일은 이름과 함께 굵게
+- 7줄 이내</code></pre>
+<p>회의 1개로 회의록, 공유 메일, 할 일 표까지 10분 안에 끝납니다.</p>
+<h2 id="요약">요약</h2>
+<ul>
+<li>"요약해줘" 대신 <strong>결정 / 할 일 / 보류</strong> 형식을
+지정한다.</li>
+<li>액션 아이템은 <strong>표</strong>로 받아서 바로 붙여넣는다.</li>
+<li>불분명한 정보는 <strong>[미정]</strong>으로 표시하게 해서 지어내기를
+막는다.</li>
+<li>같은 대화창에서 <strong>공유 메일</strong>까지 이어서 만든다.</li>
+</ul>
+
+</article>
+<div class="cta">
+<h3>이런 프롬프트가 40개 더 있습니다</h3>
+<p>메일·보고서·회의·엑셀·마케팅·CS까지, 복붙해서 바로 쓰는 실무 프롬프트 40개 + 자동화 워크플로우 5개.</p>
+<p class="price"><s data-list-price></s> 런칭 특가 <b data-price></b></p>
+<a class="btn" data-buy href="../">키트 자세히 보기</a>
+</div>
+</main>
+<footer><div class="wrap">© 2026 AI 업무자동화 키트</div></footer>
+</body>
+</html>
